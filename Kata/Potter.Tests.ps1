@@ -7,16 +7,6 @@ Describe "Potter" {
         Calculate-Price @() | Should Be 0
     }
     
-    # Implement your own tests here
-     It "should do something" {
-         # ...
-     }
-    
-    <#
-    
-    # Tests below are meant as examples if you get stuck
-    # BUT try first to implement your own tests.
-    
     It "should cost 8 for 1 book One" {
         Calculate-Price @(1) | Should Be 8
     }
@@ -82,5 +72,4 @@ Describe "Potter" {
     It "should be clever about grouping different books" {
         Calculate-Price @(1, 1, 2, 2, 3, 3, 4, 5) | Should Be (2 * 8 * 4 * 0.8)
     }
-    #>
 }
