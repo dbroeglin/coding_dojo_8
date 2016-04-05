@@ -24,7 +24,7 @@ Potter mania is sweeping the country and parents of teenagers everywhere are que
 
 Load the `Pester` module:
 
-    Import-Module Pester
+    Import-Module .\Pester
 
 Once the `Pester` module is loaded you can go to the Kata directory and invoke it:
 
