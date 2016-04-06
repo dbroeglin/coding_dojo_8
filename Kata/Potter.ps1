@@ -1,5 +1,5 @@
 function Get-SetSize($Table) {
-    ($Table | ? { $_ -gt 0 } | Measure).Count
+    ($Table | ? { $_ -gt 0 }).Length
 }
 
 function Remove-Set($Table) {
@@ -10,9 +10,7 @@ function Remove-Set($Table) {
 
 function Create-Table($Basket) {
     $Table = @(0, 0, 0, 0, 0)
-    ForEach($BookNb In $Basket) {
-        $Table[$BookNb - 1] += 1
-    }
+    $Basket | ForEach-Object { $Table[$_ - 1] += 1 }
     $Table
 }
 
