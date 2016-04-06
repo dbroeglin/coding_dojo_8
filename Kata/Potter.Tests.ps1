@@ -14,7 +14,9 @@ Describe "Potter" {
     
     <#
     
-    # Tests below are meant as example if you get stuck
+    # Tests below are meant as examples if you get stuck
+    # BUT try first to implement your own tests.
+    
     It "should cost 8 for 1 book One" {
         Calculate-Price @(1) | Should Be 8
     }
@@ -68,17 +70,17 @@ Describe "Potter" {
     }
     
     It "should discount 5% and 20% for 2 and 4 different books" {
-        Calculate-Price @(0, 0, 1, 2, 2, 3) | Should Be (8 * 2 * 0.95 + 8 * 4 * 0.8)        
+        Calculate-Price @(1, 1, 2, 3, 3, 4) | Should Be (8 * 2 * 0.95 + 8 * 4 * 0.8)        
     }
     
     It "should discount 25% and nothing for 5 and 1 different books" {
-        Calculate-Price @(0, 1, 1, 2, 3, 4) | Should Be (8 + 8 * 5 * 0.75)
+        Calculate-Price @(1, 2, 2, 3, 4, 5) | Should Be (8 + 8 * 5 * 0.75)
     }
     
     # Edge case, does you code cover this one ?
     
     It "should be clever about grouping different books" {
-        Calculate-Price @(0, 0, 1, 1, 2, 2, 3, 4) | Should Be (2 * 8 * 4 * 0.8)
+        Calculate-Price @(1, 1, 2, 2, 3, 3, 4, 5) | Should Be (2 * 8 * 4 * 0.8)
     }
     #>
 }

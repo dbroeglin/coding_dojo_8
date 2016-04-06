@@ -18,7 +18,7 @@ Potter mania is sweeping the country and parents of teenagers everywhere are que
 ## Installation
 
     git clone https://github.com/dbroeglin/coding_dojo_8.git
-    cd goding_dojo_8
+    cd coding_dojo_8
 
 ## Usage
 
